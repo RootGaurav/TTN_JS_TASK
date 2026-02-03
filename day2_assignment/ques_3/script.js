@@ -16,20 +16,48 @@
 // first();
 // console.log(y);     // Line 4
 
-let x = 5;
+// let x = 5;
 
-function first() {
-  console.log(x);
-  let y = 10;
+// function first() {
+//   console.log(x);
+//   let y = 10;
 
-  function second() {
-    console.log(y);
-    console.log(z); // Error
-    let z = 20;
+//   function second() {
+//     console.log(y);
+//     console.log(z); // Error
+//     let z = 20;
+//   }
+
+//   second();
+// }
+// first();
+// console.log(y); // Error
+
+
+//counters using closure
+
+
+
+function fn()
+{
+  var count=0;
+
+  return function (){
+    count++;
+    console.log(count)
   }
-
-  second();
 }
 
-first();
-console.log(y); // Error
+var counter=fn();
+counter();
+
+counter();
+counter();
+
+
+counter();
+counter();
+
+counter();
+
+
